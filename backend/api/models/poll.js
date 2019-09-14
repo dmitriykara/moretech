@@ -8,6 +8,19 @@ const PollSchema = new mongoose.Schema({
   description: {
     type: String,
     required: true,
+  },
+  partitipants: {
+    type: [mongoose.Schema.Types.ObjectId]
+  },
+  answers: {
+    type: [
+      {
+        user: mongoose.Schema.Types.ObjectId,
+        text: String,
+        result: Boolean,
+        is_final: Boolean,
+      }
+    ]
   }
 });
 
