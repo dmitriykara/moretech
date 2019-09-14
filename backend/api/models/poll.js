@@ -1,9 +1,6 @@
 const mongoose = require('mongoose');
 
-const Schema = mongoose.Schema;
-const ObjectId = Schema.ObjectId;
-
-const PollSchema = new Schema({
+const PollSchema = new mongoose.Schema({
   theme: {
     type: String,
     required: true,
@@ -14,4 +11,4 @@ const PollSchema = new Schema({
   }
 });
 
-module.exports = mongoose.model('Poll', PollSchema);
+module.exports = mongoose.model('Polls', PollSchema);

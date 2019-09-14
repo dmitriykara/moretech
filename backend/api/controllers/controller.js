@@ -1,12 +1,12 @@
 'use strict';
 
-var mongoose = require('mongoose'),
-  Users = mongoose.model('Users');
+const mongoose = require('mongoose');
+const User = mongoose.model('Users');
 
 exports.get_users = function (req, res) {
-  Users.find({}, function(err, task) {
+  User.find({}, (err, user) => {
     if (err)
       res.send(err);
-    res.json(task);
+    res.json(user);
   });
 }
