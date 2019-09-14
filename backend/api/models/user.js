@@ -6,4 +6,4 @@ const UserSchema = new mongoose.Schema({
   name: String,
 });
 
-module.exports = mongoose.model('Polls', PollSchema);
+module.exports = mongoose.model('Users', UserSchema);
