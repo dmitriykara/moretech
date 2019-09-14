@@ -19,4 +19,4 @@ router.route('/users')
   .get(userController.getUsers)
   .post(userController.addUser)
 
-module.exports = router
+module.exports = router;
