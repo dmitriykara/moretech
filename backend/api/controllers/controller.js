@@ -26,3 +26,26 @@ exports.updatePoll = (req, res) => {
     res.send("OK");
   });
 }
+
+exports.addAnswer = (req, res) => {
+  Answer.insertMany([req.answer], (err, answer) => {
+    if (err)
+      req.send(err);
+    Poll.update(
+      {id:req.answer.pollid}, 
+      {$addToSet: {answers: req.answer.id}}, 
+      (err, poll) => {
+        if (err)
+          res.send(err);
+        res.send("OK");
+      });
+  });
+}
+
+exports.updateAnswer = (req, res) => {
+  Answer.update({id:req.answer.id}, req.answer, (err, answer) => {
+    if (err)
+      res.send(err);
+    res.send("OK")
+  });
+}
