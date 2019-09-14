@@ -1,18 +1,19 @@
 'use strict';
 
 module.exports = function (app) {
-  const controller = require('../controllers/controller');
-  const users_controller = require('../controllers/users_controller');
-  
+  const pollController = require('../controllers/pollController');
+  const userController = require('../controllers/userController');
+
   app.route('/polls')
-    .get(controller.getPolls)
-    .post(controller.addPoll)
-    .put(controller.updatePoll)
+    .get(pollController.getPolls)
+    .post(pollController.addPoll)
+    .put(pollController.updatePoll)
 
   app.route('/answers')
-    .post(controller.addAnswer)
-    .put(controller.updateAnswer)
+    .post(pollController.addAnswer)
+    .put(pollController.updateAnswer)
 
   app.route('/users')
-    .get(users_controller.getUsers)
+    .get(userController.getUsers)
+    .post(userController.addUser)
 }
