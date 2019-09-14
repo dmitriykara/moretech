@@ -2,9 +2,8 @@
 
 module.exports = function (app) {
   const controller = require('../controllers/controller');
-
-  app.route('/users')
-    .get(controller.getUsers)
+  const answers_controller = require('../controllers/answers_controlles');
+  const users_controller = require('../controllers/users_controlles');
   
   app.route('/polls')
     .get(controller.getPolls)
@@ -12,6 +11,9 @@ module.exports = function (app) {
     .put(controller.updatePoll)
 
   app.route('/answers')
-    .post(controller.addAnswer)
-    .put(controller.updateAnswer)
+    .post(answers_controller.addAnswer)
+    .put(answers_controller.updateAnswer)
+
+  app.route('/users')
+    .get(users_controller.getUsers)
 }
