@@ -4,6 +4,8 @@ const api = require('./api/routes/routes');
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
+const Poll = require('./api/models/poll');
+const User = require('./api/models/user');
 
 
 mongoose.connect('mongodb://localhost/moretech', {

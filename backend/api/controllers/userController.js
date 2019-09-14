@@ -1,7 +1,7 @@
 'use strict';
 
 const mongoose = require('mongoose');
-const User = mongoose.model('Users');
+const User = mongoose.model('User');
 
 exports.getUsers = (req, res) => {
   User.find({}, (err, users) => {

@@ -14,4 +14,4 @@ const PollSchema = new mongoose.Schema({
   theme: String,
 });
 
-module.exports = mongoose.model('Polls', PollSchema);
+module.exports = mongoose.model('Poll', PollSchema);
