@@ -14,7 +14,7 @@ exports.getUsers = (req, res) => {
 }
 
 exports.getPolls = (req, res) => {
-  Poll.find({}, (err, user) => { //ToDo check for user's poll
+  Poll.find({"users":req.user.id}, (err, user) => {
     if (err)
       res.send(err);
     res.json(user);
