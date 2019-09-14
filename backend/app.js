@@ -3,7 +3,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/my_database', {
+mongoose.connect('mongodb://localhost/moretech', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
@@ -11,6 +11,9 @@ mongoose.connection.on(
   'error',
   console.error.bind(console, 'connection error:')
 );
+mongoose.connection.once('open', function () {
+  console.log('db connected');
+});
 
 const app = express();
 const port = 3000;
