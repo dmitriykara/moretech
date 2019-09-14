@@ -1,7 +1,0 @@
-flask
-flask-cors
-flask-restful
-gunicorn
-dnspython
-requests
-pymongo
