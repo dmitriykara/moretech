@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Polls</title>
+<!--    vtb favicon-->
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAC9gmEAqF0yAJM4AwC4flsA8N3SAJxIGACdSBgAl0ANAP//+QDUrZcAlj4KAJlEEgDw39QAkDIAAP///wCRMgAAm0YUAPvu6wDlyLcAplgsALRzTQDlyrkA1ayXAJQ7BwCfTyIAnEcXAPPi2QCfTR8AnUscANWslgCUOwYA6dTMANy4pgCkVywA0aGKAP/49gDDkG8A6NHEAOfQvwDt2MoAs29MAKBRIwDz4t4A6dPGAKJVKAD/+/wA7NbNAL+DZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4qGA0NDQ0NDw0NDQ0ZDg4fCiAODg4ODg4ODg4oJA4aBRUODg4ODg4ODg4rFxEOAS4ODg4ODg4ODg4IGxYOHS8ODg4ODg4ODg4OFAMODhMnLQYNDw8NDQ0NDQAODg4hJQ4ODg4ODg4ODg4ODg4OCQIeDw0NDQ0NDQ0NDQ0ODg4sIg4ODg4ODg4ODg4ODg4OBAILDQ0NDQ0NDQ0PDwcjDg4mKRIODg4ODg4ODg4ODg4ODgwcDQ0NDw0NDw0PDRAODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=" rel="icon" type="image/x-icon" />
+
+    <link rel="stylesheet" href="scss/navigationBar.css">
+    <link rel="stylesheet" href="scss/carouselPageStyle.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
+
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+
+<section>
+    <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="92px" height="33px" viewBox="0 0 92 33" version="1.1">
+            <!— Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch —>
+            <title>Group 6</title>
+            <desc>Created with Sketch.</desc>
+            <defs>
+                <polygon id="path-1" points="32.5097041 32.7427747 91.8248457 32.7427747 91.8248457 6.50603633 32.5097041 6.50603633"/>
+            </defs>
+            <g id="vtb_ru" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Group-6">
+                    <g id="Group-Copy">
+                        <g id="Group-2">
+                            <path d="M6.25065367,0 L4.68701481,4.28311036 L26.3555573,4.28311036 L27.9191962,0 L6.25065367,0 Z M3.90470765,6.423693 L2.34106879,10.7058308 L24.0096113,10.7058308 L25.5732502,6.423693 L3.90470765,6.423693 Z M1.56363886,12.847386 L0,17.1295238 L21.6685425,17.1295238 L23.231206,12.847386 L1.56363886,12.847386 Z" id="Fill-1" fill="#009FDF"/>
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"/>
+                            </mask>
+                            <g id="Clip-3"/>
+                            <path d="M46.0659305,18.7617116 L46.0659305,18.8520825 C47.0561913,19.215552 48.002112,19.8511271 48.497735,20.2592855 C50.0289442,21.5304356 50.7048834,23.2097442 50.7048834,25.3885751 C50.7048834,28.975602 48.8130419,31.5625912 45.7052982,32.3799011 C44.7593775,32.6520067 43.7691167,32.7433706 41.9216153,32.7433706 L32.5097041,32.7433706 L32.5097041,6.50603633 L40.8416891,6.50603633 C42.5532145,6.50603633 43.7237914,6.59640716 44.7593775,6.86851275 C47.7774558,7.68582259 49.7589627,9.77428262 49.7589627,13.0872178 C49.7589627,14.8578903 49.1283488,16.3564572 48.0927627,17.3545087 C47.642465,17.808349 47.0118512,18.3535533 46.0659305,18.7617116 Z M37.7339454,21.5304356 L37.7339454,28.4303977 L41.3373122,28.4303977 C42.4172384,28.4303977 43.4084845,28.3400269 44.129749,27.6587698 C44.8500282,26.9775128 45.1653351,26.1155141 45.1653351,24.9804167 C45.1653351,24.118418 44.9396936,23.3011081 44.489396,22.711215 C43.7237914,21.7578524 42.7778706,21.5304356 41.1569961,21.5304356 L37.7339454,21.5304356 Z M37.6886201,16.9910392 L40.6160476,16.9910392 C41.516643,16.9910392 41.9669407,16.9910392 42.4172384,16.8549864 C43.634126,16.4915169 44.3997305,15.4030945 44.3997305,13.9045276 C44.3997305,12.1348482 43.5888006,11.3622273 42.4172384,10.9997508 C41.9216153,10.863698 41.4269776,10.8180161 40.4357315,10.8180161 L37.6886201,10.8180161 L37.6886201,16.9910392 Z M58.5412454,32.7433706 L58.5412454,10.9083869 L51.0201903,10.9083869 L51.0201903,6.50603633 L71.918141,6.50603633 L70.4322572,10.9083869 L63.7654868,10.9083869 L63.7654868,32.7433706 L58.5412454,32.7433706 Z M73.5390156,32.7433706 L73.5390156,6.50603633 L90.4739526,6.50603633 L88.9880688,10.9083869 L78.7189169,10.9083869 L78.7189169,16.7189336 L82.9075721,16.7189336 C86.2852974,16.7189336 88.0421481,17.5362434 89.2580504,18.5799769 C90.2039711,19.3972867 91.8248457,21.2126481 91.8248457,24.799675 C91.8248457,28.3400269 90.1586457,30.291441 88.7624273,31.2904856 C87.1415527,32.4245899 85.4300274,32.7433706 81.9616514,32.7433706 L73.5390156,32.7433706 Z M78.7189169,28.3400269 L82.6375906,28.3400269 C84.1234744,28.3400269 85.0240698,27.9765574 85.6546836,27.1592475 C85.9699905,26.7510892 86.4202882,26.0241502 86.4202882,24.6626291 C86.4202882,23.3011081 85.9699905,22.3477455 85.0693951,21.6664884 C84.5294321,21.2583301 83.8081675,21.0319064 82.5922652,21.0319064 L78.7189169,21.0319064 L78.7189169,28.3400269 Z" id="Fill-2" fill="#0A2973" mask="url(#mask-2)"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </svg>
+    </div>
+
+    <div class="current-polls">
+        <ins id="main-title">
+            Текущие голосования
+        </ins>
+    </div>
+
+<!--    circle navigation bar-->
+    <div class="nav-bar">
+        <ul class="mini-circles" id="options">
+            <li class="option">
+                <button class="option1" type="button">
+                </button>
+            </li>
+            <li class="option">
+                <button class="option2" type="button">
+                </button>
+            </li>
+            <li class="option">
+                <button class="option3" type="button">
+                </button>
+            </li>
+            <li class="option">
+                <button class="option4" type="button" id="openPollSettingsButton">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="svg-middle" viewBox="0 0 62 62" fill="none">
+<rect y="29" width="62" height="5" rx="2.5" fill="#525E80"/>
+<rect x="29" y="62" width="62" height="5" rx="2.5" transform="rotate(-90 29 62)" fill="#525E80"/>
+</svg>
+                    </span>
+                </button>
+            </li>
+        </ul>
+        <button class="circle-profile-button">
+            <img src="img/profileImage.png" alt="">
+        </button>
+    </div>
+</section>
+
+
+<!--<section class="add-poll-window">-->
+<!--    <div class="poll-window" id="poll-window">-->
+<!--        <div class="poll-window__header">-->
+<!--            <div class="header__close-area">-->
+<!--                <button class="close-button" id="closePollSettingsButton">-->
+<!--                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"-->
+<!--                         width="24" height="24"-->
+<!--                         class="svg-middle"-->
+<!--                         viewBox="0 0 172 172"-->
+<!--                         style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#aeaeae"><path d="M40.90039,30.76628l-10.13411,10.13411l45.09961,45.09961l-45.09961,45.09961l10.13411,10.13411l45.09961,-45.09961l45.09961,45.09961l10.13411,-10.13411l-45.09961,-45.09961l45.09961,-45.09961l-10.13411,-10.13411l-45.09961,45.09961z"></path></g></g></svg>-->
+<!--                </button>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="poll-window__body">-->
+<!--            <div class="body__main-theme">-->
+<!--                <input class="main-theme__input" id="main-theme__input" type="text" placeholder="Enter the main title of poll...">-->
+<!--            </div>-->
+<!--            <div class="body__documents"></div>-->
+<!--            <div class="body__type-of-poll"></div>-->
+<!--            <div class="body_add-participants"></div>-->
+<!--        </div>-->
+
+
+<!--        <div class="poll-window__footer">-->
+<!--            <div class="header__continue-area">-->
+<!--                <button class="add-poll-button" id="addPollButton">-->
+<!--                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"-->
+<!--                         width="30" height="30"-->
+<!--                         class="svg-middle"-->
+<!--                         viewBox="0 0 172 172"-->
+<!--                         style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#aeaeae"><path d="M57.27734,22.87734c-2.33303,0.00061 -4.43307,1.41473 -5.31096,3.57628c-0.8779,2.16155 -0.3586,4.6395 1.31331,6.26669l53.27969,53.27969l-53.27969,53.27969c-1.49777,1.43802 -2.10111,3.5734 -1.57733,5.58259c0.52378,2.0092 2.09283,3.57825 4.10203,4.10203c2.0092,0.52378 4.14457,-0.07956 5.58259,-1.57733l57.33333,-57.33333c2.23811,-2.23904 2.23811,-5.86825 0,-8.10729l-57.33333,-57.33333c-1.07942,-1.10959 -2.56162,-1.73559 -4.10963,-1.73568z"></path></g></g></svg>-->
+<!--                    <span class="tooltip">Add poll</span>-->
+<!--                </button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--</section>-->
+
+<section>
+    <div class="slideshow-container" id="carousel-module" style="height: 500px; width: 500px; background-color: #fff; top: 50%; left: 50%; margin: -220px 0 0 -250px">
+
+        <div class="mySlides">
+            <div class="wrapper">
+                <div class="title-module">
+                    <div class="title-module-skew">
+                        <span>
+                            Повышение ставок
+                        </span>
+                    </div>
+                    <div class="title-module-shadow-skew"></div>
+                </div>
+
+                <div class="poll-module">
+                    <div class="poll-module-skew"></div>
+                    <div class="poll-module-shadow-skew"></div>
+                </div>
+
+                <div class="go-into-the-poll-module">
+                    <div class="go-into-the-poll-module"></div>
+                    <div class="go-into-the-poll-module-skew"></div>
+                </div>
+            </div>
+
+        </div>
+
+
+<!--        <div class="mySlides">-->
+<!--        </div>-->
+
+        <a class="prev" onclick="plusSlides(-1)">
+            <svg xmlns="http://www.w3.org/2000/svg" class="svg-middle" width="30" height="30" viewBox="0 0 51 90" fill="none">
+                <path d="M1.75736 40.7574C-0.585786 43.1005 -0.585786 46.8995 1.75736 49.2426L39.9411 87.4264C42.2843 89.7696 46.0833 89.7696 48.4264 87.4264C50.7696 85.0833 50.7696 81.2843 48.4264 78.9411L14.4853 45L48.4264 11.0589C50.7696 8.71573 50.7696 4.91674 48.4264 2.57359C46.0833 0.230447 42.2843 0.230447 39.9411 2.57359L1.75736 40.7574ZM7 39H6L6 51H7L7 39Z" fill="#0D2051" fill-opacity="0.85"/>
+            </svg>
+        </a>
+        <a class="next" onclick="plusSlides(1)">
+            <svg xmlns="http://www.w3.org/2000/svg" class="svg-middle" width="30" height="30" viewBox="0 0 51 90" fill="none">
+                <path d="M49.2426 49.2426C51.5858 46.8995 51.5858 43.1005 49.2426 40.7574L11.0589 2.57359C8.71573 0.230447 4.91674 0.230447 2.57359 2.57359C0.230447 4.91674 0.230447 8.71573 2.57359 11.0589L36.5147 45L2.57359 78.9411C0.230447 81.2843 0.230447 85.0833 2.57359 87.4264C4.91674 89.7696 8.71573 89.7696 11.0589 87.4264L49.2426 49.2426ZM44 51H45V39H44V51Z" fill="#0D2051" fill-opacity="0.85"/>
+            </svg>
+        </a>
+
+        <div style="text-align:center; position: absolute; bottom: 20px; left: 50%; width: 100px;margin-left: -50px;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+<!--            <span class="dot" onclick="currentSlide(2)"></span>-->
+        </div>
+
+    </div>
+</section>
+
+
+<div class="alternative-poll-window" id="alternative-poll-window">
+    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 2566 1606"><defs><style>.cls-1{opacity:0.75;}.cls-2,.cls-3,.cls-4,.cls-5{fill:none;stroke-linecap:round;stroke-linejoin:round;}.cls-2{stroke:#0d2d90;}.cls-2,.cls-3{stroke-width:7px;}.cls-3{stroke:#4c64ad;}.cls-4,.cls-5{stroke:#439ed9;}.cls-4{stroke-width:5px;}.cls-5{stroke-width:3px;}</style></defs><title>lineszzZ</title><g class="cls-1"><path class="cls-2" d="M1748.9,19.61H499.9L142.35,77V488.09L247.22,775.72v748.61l42.91,27.79h2269.2" transform="translate(3.17 3.74)"/><path class="cls-2" d="M2020.63,77H638.14L352.09-.24,186.76,28.69l8,781L142.35,901v448.5l76.29,124.92H2211.32" transform="translate(3.17 3.74)"/><path class="cls-3" d="M1868.07,118.85H89.91L47,174.44V650.87L185.26,873.2l-9.4,361L323.5,1512.4H1868.07" transform="translate(3.17 3.74)"/><path class="cls-4" d="M1868.07,39.46H1310.32L1153,158.57H528.49L437.91,77H80.37l-81,81.55V448.4L275.84,889.09v432.75L323.5,1429H685.81l219.3,170.73h772.27" transform="translate(3.17 3.74)"/><path class="cls-5" d="M2211.32,103H1350.83L1220.28,39.46H600L528.49,103H252L109,269.74v286L66.07,737.09v38.63l143,188.8v587.6L252,1584.19,2349.56,1582" transform="translate(3.17 3.74)"/></g></svg>
+
+    <div class="poll-window__body">
+        <div class="body__main-theme">
+            <input class="main-theme__input" id="main-theme__input" type="text" placeholder="Тема голосования...">
+            <svg xmlns="http://www.w3.org/2000/svg" width="700" height="46" viewBox="0 0 1158 46" fill="none">
+                <line y1="17" x2="1049" y2="17" stroke="#0D2D90" stroke-opacity="0.55" stroke-width="4"/>
+                <path d="M145 44.5H700L764.5 2H1263" stroke="#439ED9" stroke-opacity="0.65" stroke-width="2.3"/>
+            </svg>
+        </div>
+        <div class="body__description">
+            <textarea name="description" id="" cols="30" rows="10" placeholder="Опишите тему"></textarea>
+        </div>
+        <div class="body__ul">
+            <ul class="options">
+                <li>
+                    <button class="options__button" id="addDeadline">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle" width="150" height="110" viewBox="0 0 227 197" fill="none">
+                            <path d="M131.14 177.644H18.4477C11.173 177.644 5.27051 171.742 5.27051 164.459V53.2505" stroke="#E2E2E2" stroke-width="9" stroke-miterlimit="10" stroke-linecap="round"/>
+                            <path d="M176.518 25.3315H185.354C192.629 25.3315 198.531 31.233 198.531 38.516V96.2919" stroke="#E2E2E2" stroke-width="9" stroke-miterlimit="10"/>
+                            <path d="M136.162 25.3315H155.181" stroke="#E2E2E2" stroke-width="9" stroke-miterlimit="10"/>
+                            <path d="M89.8564 25.3315H110.722" stroke="#E2E2E2" stroke-width="9" stroke-miterlimit="10"/>
+                            <path d="M50.8169 25.3315H66.8159" stroke="#E2E2E2" stroke-width="9" stroke-miterlimit="10"/>
+                            <path d="M5.27051 41.3437V38.516C5.27051 31.2374 11.1687 25.3315 18.4477 25.3315H27.4698" stroke="#E2E2E2" stroke-width="9" stroke-miterlimit="10" stroke-linecap="round"/>
+                            <path d="M38.1358 5.28296C44.0297 5.28296 48.8061 10.062 48.8061 15.9549V37.303C48.8061 43.2002 44.0297 47.9749 38.1401 47.9749C32.2462 47.9749 27.4741 43.1958 27.4741 37.303V25.3316V15.9505C27.4698 10.0577 32.2462 5.28296 38.1358 5.28296Z" stroke="#E2E2E2" stroke-width="9" stroke-miterlimit="10"/>
+                            <path d="M79.1904 5.28296C85.0843 5.28296 89.8564 10.062 89.8564 15.9549V37.303C89.8564 43.2002 85.08 47.9749 79.1904 47.9749C73.2965 47.9749 68.5244 43.1958 68.5244 37.303V15.9549C68.5201 10.0577 73.2965 5.28296 79.1904 5.28296Z" stroke="#E2E2E2" stroke-width="9" stroke-miterlimit="10"/>
+                            <path d="M123.468 5.28296C129.362 5.28296 134.134 10.062 134.134 15.9549V37.303C134.134 43.2002 129.358 47.9749 123.468 47.9749C117.574 47.9749 112.802 43.1958 112.802 37.303V15.9549C112.798 10.0577 117.574 5.28296 123.468 5.28296Z" stroke="#E2E2E2" stroke-width="9" stroke-miterlimit="10"/>
+                            <path d="M165.847 5.28296C171.741 5.28296 176.513 10.062 176.513 15.9549V37.303C176.513 43.2002 171.737 47.9749 165.847 47.9749C159.953 47.9749 155.181 43.1958 155.181 37.303V15.9549C155.181 10.0577 159.958 5.28296 165.847 5.28296Z" stroke="#E2E2E2" stroke-width="9" stroke-miterlimit="10"/>
+                            <path d="M5.27051 65.157H198.527" stroke="#E2E2E2" stroke-width="9" stroke-miterlimit="10"/>
+                            <path d="M5.27051 102.5H133.573" stroke="#E2E2E2" stroke-width="9" stroke-miterlimit="10"/>
+                            <path d="M5.27051 140.283H118.105" stroke="#E2E2E2" stroke-width="9" stroke-miterlimit="10"/>
+                            <path d="M44.6597 65.157V177.644" stroke="#E2E2E2" stroke-width="9" stroke-miterlimit="10"/>
+                            <path d="M82.4092 65.157V177.644" stroke="#E2E2E2" stroke-width="9" stroke-miterlimit="10"/>
+                            <path d="M121.311 65.157V121.4" stroke="#E2E2E2" stroke-width="9" stroke-miterlimit="10"/>
+                            <path d="M159.181 65.157V88.5557" stroke="#E2E2E2" stroke-width="9" stroke-miterlimit="10"/>
+                            <path d="M201.439 181.823C192.736 188.35 181.928 192.214 170.218 192.214C141.439 192.214 118.109 168.871 118.109 140.076C118.109 111.281 141.439 87.9385 170.218 87.9385C180.655 87.9385 190.38 91.008 198.531 96.2964C212.852 105.587 222.327 121.724 222.327 140.076C222.327 153.248 217.447 165.28 209.395 174.458" stroke="#E2E2E2" stroke-width="9" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M147.523 110.245C153.831 105.466 161.692 102.629 170.218 102.629C191.002 102.629 207.851 119.488 207.851 140.283C207.851 161.079 191.002 177.937 170.218 177.937C149.434 177.937 132.585 161.079 132.585 140.283C132.585 132.158 135.157 124.629 139.532 118.478" stroke="#E2E2E2" stroke-width="9" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M170.218 144.221V120.01" stroke="#E2E2E2" stroke-width="9" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M195.55 144.221H170.218" stroke="#E2E2E2" stroke-width="9" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </li>
+                <li>
+                    <button class="options__button">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle" width="130" height="120" viewBox="0 0 236 227" fill="none">
+                            <circle cx="123" cy="113" r="109" stroke="#E2E2E2" stroke-width="8"/>
+                            <circle cx="58" cy="169" r="54" stroke="#E2E2E2" stroke-width="8"/>
+                            <circle cx="122.883" cy="114.117" r="103.117" fill="#132D71" fill-opacity="0.082"/>
+                            <circle cx="122.883" cy="71.5871" r="29.7087" stroke="#132D71" stroke-opacity="0.35" stroke-width="6"/>
+                            <path d="M188.682 164.202C150 104 92.5 103 57.0851 164.202" stroke="#132D71" stroke-opacity="0.35" stroke-width="6" stroke-linecap="round"/>
+                            <circle cx="57.5763" cy="169.603" r="50.5763" fill="white"/>
+                            <circle cx="57.5763" cy="169.603" r="50.5763" fill="#F3F5FA" fill-opacity="0.82"/>
+                            <line x1="60.1665" y1="154.009" x2="60.1665" y2="185.198" stroke="#395694" stroke-opacity="0.25" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="43.9458" y1="168.254" x2="75.1345" y2="168.254" stroke="#395694" stroke-opacity="0.25" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </li>
+                <li>
+                    <button class="options__button" type="">
+                        <svg xmlns="http://www.w3.org/2000/svg"  style="vertical-align: middle" width="160" height="160" viewBox="0 0 292 243" fill="none">
+                            <ellipse cx="119.387" cy="121.785" rx="100.905" ry="94.7999" transform="rotate(-12.7893 119.387 121.785)" fill="#132D71" fill-opacity="0.08"/>
+                            <path d="M124.649 154.01L104.892 65.5058L105.982 62.4617C117.686 29.7824 158.672 19.2253 184.705 42.1889L185.761 43.1203L220.563 191.712L216.733 199.803C207.56 219.176 183.003 225.385 165.722 212.702L162.006 209.973L130.988 75.6864C136.155 58.6301 157.696 53.3242 170.192 66.0318L172.913 68.8002L187.206 138.114" stroke="#E2E2E2" stroke-width="13" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <ellipse cx="176.893" cy="35.4688" rx="24.0624" ry="22.6065" transform="rotate(-12.7893 176.893 35.4688)" fill="#132D71" fill-opacity="0.08"/>
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+<!--    <div class="poll-window__footer">-->
+        <div class="poll-window__continue-area">
+            <button class="add-poll-button" id="addPollButton">
+                <svg xmlns="http://www.w3.org/2000/svg" class="arrow" width="30" height="30" viewBox="0 0 97 97" fill="none">
+                    <path d="M93.5458 53.6135C96.1119 51.1031 96.1572 46.9878 93.6468 44.4216L52.7381 2.60383C50.2277 0.0376888 46.1124 -0.00753457 43.5463 2.50283C40.9801 5.01319 40.9349 9.12851 43.4452 11.6947L79.8085 48.866L42.6372 85.2293C40.071 87.7397 40.0258 91.855 42.5362 94.4212C45.0465 96.9873 49.1618 97.0325 51.728 94.5222L93.5458 53.6135ZM0.928576 54.4996L88.9289 55.4666L89.0718 42.4674L1.07142 41.5004L0.928576 54.4996Z" fill="#132D71" fill-opacity="0.85"/>
+                </svg>
+                <span class="tooltip">Add poll</span>
+            </button>
+        </div>
+<!--    </div>-->
+</div>
+
+
+<script src="js/addPollScript.js"></script>
+<script src="js/carouselPageScript.js"></script>
+
+</body>
+</html>

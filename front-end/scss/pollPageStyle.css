@@ -1,0 +1,157 @@
+.title {
+  display: inline-block;
+  width: 60%;
+  height: 60px;
+  position: relative;
+  top: 15%;
+  left: 10%;
+  margin-top: 50px;
+}
+.title #main-title {
+  font-family: "Roboto";
+  font-size: 50px;
+  font-weight: 300;
+  border-radius: 2px;
+  background-color: #fff;
+  color: #182852;
+}
+
+.wrapper .main-wrapper .pins .second-pin, .wrapper .main-wrapper .pins .first-pin {
+  display: inline-block;
+  width: 46%;
+  position: relative;
+  height: 130px;
+  border-radius: 15px;
+  background-color: #e9e9e9;
+}
+
+.wrapper .main-wrapper .pins .second-pin span, .wrapper .main-wrapper .pins .first-pin span {
+  font-family: "Open Sans";
+  font-size: 26px;
+  font-weight: 200;
+  color: #4b4b4b;
+}
+
+.wrapper {
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+}
+.wrapper .main-wrapper {
+  width: 70%;
+  height: auto;
+  display: inline-block;
+  margin: 0 30px;
+  position: relative;
+}
+.wrapper .main-wrapper .pins {
+  display: block;
+  width: 100%;
+  height: 150px;
+  margin: 20px 0;
+  position: relative;
+}
+.wrapper .main-wrapper .pins .first-pin {
+  float: left;
+  padding: 10px;
+}
+.wrapper .main-wrapper .pins .first-pin .image {
+  float: left;
+  height: 70px;
+  width: 70px;
+  margin: 0px 20px 0px 0px;
+}
+.wrapper .main-wrapper .pins .first-pin .image img {
+  height: 60px;
+  width: 60px;
+  margin: 10px 10px 10px 10px;
+}
+.wrapper .main-wrapper .pins .second-pin {
+  float: right;
+  padding: 10px;
+}
+.wrapper .main-wrapper .pins .second-pin .image {
+  float: left;
+  height: 70px;
+  width: 70px;
+  margin: 0px 20px 0px 0px;
+}
+.wrapper .main-wrapper .pins .second-pin .image img {
+  height: 60px;
+  width: 60px;
+  margin: 10px 10px 10px 10px;
+}
+.wrapper .main-wrapper .voice-container .voice-container__comment, .wrapper .main-wrapper .voice-container .voice-container__ticks {
+  width: 45%;
+  display: inline-block;
+  height: 400px;
+}
+.wrapper .main-wrapper .voice-container .voice-container__ticks .agree-disagree .disagree-button, .wrapper .main-wrapper .voice-container .voice-container__ticks .agree-disagree .agree-button {
+  height: 120px;
+  width: 120px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin-top: 50px;
+  border: #596EA9 8px solid;
+  outline: rgba(255, 255, 255, 0.5);
+  box-shadow: inset -5px -5px 5px 0 #445480, inset 5px 5px 5px 0 rgba(255, 255, 255, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.05), 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+.wrapper .main-wrapper .voice-container {
+  width: 100%;
+  height: 400px;
+  display: block;
+  position: relative;
+  border-radius: 15px;
+  background-color: #647AB8;
+}
+.wrapper .main-wrapper .voice-container .voice-container__ticks {
+  position: relative;
+  float: left;
+  margin: 20px 0px 20px 30px;
+}
+.wrapper .main-wrapper .voice-container .voice-container__ticks .agree-disagree {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 200px;
+}
+.wrapper .main-wrapper .voice-container .voice-container__ticks .agree-disagree .agree-button {
+  margin-right: 50px;
+}
+.wrapper .main-wrapper .voice-container .voice-container__comment {
+  position: relative;
+  margin: 20px 30px 20px 0;
+}
+.wrapper .main-wrapper .voice-container .voice-container__comment textarea {
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  height: 340px;
+  width: 100%;
+  padding: 10px;
+  color: #37456A;
+  background-color: #E8EBF4;
+  font-family: "Open Sans";
+  font-size: 20px;
+}
+.wrapper .chat-wrapper {
+  width: 20%;
+  margin: 0;
+  z-index: -1;
+  position: fixed;
+  float: right;
+  height: 400px;
+  display: inline-block;
+}
+.wrapper .chat-wrapper .chat {
+  margin: 150px 30px 0 30px;
+  z-index: -1;
+  width: 100%;
+  height: 400px;
+  border-radius: 12px;
+  background-color: #e9e9e9;
+}
+
+/*# sourceMappingURL=pollPageStyle.css.map */
