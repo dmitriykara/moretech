@@ -6,8 +6,8 @@ const express = require('express');
 
 const mongoose = require('mongoose');
 mongoose.set('useCreateIndex', true);
-let _ = require('./api/models/poll');
-_ = require('./api/models/pollExpiration')
+let _ = require('./api/models/pollExpiration');
+_ = require('./api/models/poll');
 _ = require('./api/models/user');
 
 const api = require('./api/routes/routes');

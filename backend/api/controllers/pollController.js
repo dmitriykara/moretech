@@ -6,7 +6,7 @@ const Poll = mongoose.model('Poll');
 
 exports.getPolls = (req, res) => {
   Poll.find(
-    { participants : { $elemMatch : { login: req.query.login.toString() }}},
+    { participants: { $elemMatch: { login: req.query.login.toString() } } },
     (err, polls) => {
       if (err) res.send(err);
 
@@ -16,7 +16,9 @@ exports.getPolls = (req, res) => {
 }
 
 exports.addPoll = (req, res) => {
-  Poll.create(req.body.poll, (err, _) => {
+  let poll = req.body.poll;
+  poll.createdAt = Date.now();
+  Poll.create(poll, (err, _) => {
     if (err) res.send(err);
 
     res.sendStatus(200);
@@ -62,7 +64,7 @@ exports.updateAnswer = (req, res) => {
   Poll.findById(req.body.pollId, 'answers', (err, poll) => {
     if (err) res.send(err);
 
-    const answer = poll.findOne({answers : { $elemMatch : { user: req.answer.user }}});
+    const answer = poll.findOne({ answers: { $elemMatch: { user: req.answer.user } } });
 
     answer.update(req.body.answer, (err, _) => {
       if (err) res.send(err);
@@ -88,7 +90,7 @@ exports.closePoll = (poll) => {
     if (counter_agree > 0.5 * poll.users.length) {
       poll.status = "completed";
       poll.result = 1;
-      Poll.updateOne({_id:poll._id}, poll, (err, _) => {
+      Poll.updateOne({ _id: poll._id }, poll, (err, _) => {
         if (err) console.log(err);
       });
     }
@@ -96,7 +98,7 @@ exports.closePoll = (poll) => {
     if (counter_disagree > 0.5 * poll.users.length) {
       poll.status = "completed";
       poll.result = 0;
-      Poll.updateOne({_id:poll._id}, poll, (err, _) => {
+      Poll.updateOne({ _id: poll._id }, poll, (err, _) => {
         if (err) console.log(err);
       });
     }
