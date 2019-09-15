@@ -6,18 +6,12 @@ const Poll = mongoose.model('Poll');
 
 exports.getPolls = (req, res) => {
   Poll.find(
-    { 
-      participants : 
-      {
-        login: req.query.login.toString(),
-        isRequired: true,
-      }
-    },
-      (err, polls) => {
-        if (err) res.send(err);
+    { participants : { $elemMatch : { login: req.query.login.toString() }}},
+    (err, polls) => {
+      if (err) res.send(err);
 
-        res.json(polls);
-      }
+      res.json(polls);
+    }
   );
 }
 
