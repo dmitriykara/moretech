@@ -1,15 +1,5 @@
-db.createUser({
-    user:"moretech",
-    roles: [
-        {
-          "role":"root",
-          "db":"admin"
-        }
-    ]
-});
-
-db.Users.insert({
+db.Users.insertMany([{
   department: "R&D",
   login: "Skalny",
   name: "Pavel :)",
-})
+}])
