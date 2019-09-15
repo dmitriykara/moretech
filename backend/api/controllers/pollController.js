@@ -13,7 +13,7 @@ exports.getPolls = (req, res) => {
 }
 
 exports.addPoll = (req, res) => {
-  Poll.create(req.poll, (err, poll) => {
+  Poll.create(req.poll, (err, _) => {
     if (err) res.send(err);
 
     res.sendStatus(200);
@@ -21,7 +21,7 @@ exports.addPoll = (req, res) => {
 }
 
 exports.updatePoll = (req, res) => {
-  Poll.updateOne({ id: req.poll.id }, req.poll, (err, poll) => {
+  Poll.updateOne({ id: req.poll.id }, req.poll, (err, _) => {
     if (err) res.send(err);
 
     res.sendStatus(200);
@@ -42,7 +42,7 @@ exports.addAnswer = (req, res) => {
   Poll.findById(req.pollId, 'answers', (err, poll) => {
     if (err) res.send(err);
 
-    poll.answers.create(req.answer, (err, doc) => {
+    poll.answers.create(req.answer, (err, _) => {
       if (err) res.send(err);
 
       res.sendStatus(200);
@@ -60,7 +60,7 @@ exports.updateAnswer = (req, res) => {
     if (err) res.send(err);
     const answer = poll.answers.id(req.answer.id);
 
-    answer.update(req.answer, (err, doc) => {
+    answer.update(req.answer, (err, _) => {
       if (err) res.send(err);
 
       res.sendStatus(200);
