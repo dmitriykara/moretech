@@ -1,4 +1,4 @@
-db.Users.insertMany([
+db.users.insertMany([
   {
     department: "R&D",
     login: "fabakumov",
@@ -36,7 +36,8 @@ db.Users.insertMany([
   },
 ])
 
-db.Polls.insertMany([
+db.polls.insertMany(
+[
   {
     answers: [
       {
@@ -65,7 +66,7 @@ db.Polls.insertMany([
       },
     ],
     description: "Все согласны на '4 сыра'?",
-    partitipants: [
+    participants: [
       {
         login: "gabramov",
         isRequired: true,
@@ -84,10 +85,7 @@ db.Polls.insertMany([
       }
     ],
     theme: "Заказ пиццы",
-  }
-])
-
-db.Polls.insertMany([
+  },
   {
     answers: [
       {
@@ -116,7 +114,7 @@ db.Polls.insertMany([
       },
     ],
     description: "Согласны ли Вы с ТЗ проекта?",
-    partitipants: [
+    participants: [
       {
         login: "gabramov",
         isRequired: true,

@@ -9,8 +9,8 @@ exports.getPolls = (req, res) => {
     { 
       participants : 
       {
-        login: req.query.login,
-        isRequired: true 
+        login: req.query.login.toString(),
+        isRequired: true,
       }
     },
       (err, polls) => {
