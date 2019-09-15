@@ -66,10 +66,22 @@ db.Polls.insertMany([
     ],
     description: "Все согласны на '4 сыра'?",
     partitipants: [
-      "gabramov",
-      "kgolovanov",
-      "ukomarova",
-      "fabakumov",
+      {
+        login: "gabramov",
+        isRequired: true,
+      },
+      {
+        login: "kgolovanov",
+        isRequired: true,
+      },
+      {
+        login: "ukomarova",
+        isRequired: true,
+      },
+      {
+        login: "fabakumov",
+        isRequired: true,
+      }
     ],
     theme: "Заказ пиццы",
   }
@@ -105,10 +117,22 @@ db.Polls.insertMany([
     ],
     description: "Согласны ли Вы с ТЗ проекта?",
     partitipants: [
-      "gabramov",
-      "kgolovanov",
-      "mvasutkina",
-      "fabakumov",
+      {
+        login: "gabramov",
+        isRequired: true,
+      },
+      {
+        login: "kgolovanov",
+        isRequired: true,
+      },
+      {
+        login: "mvasutkina",
+        isRequired: true,
+      },
+      {
+        login: "fabakumov",
+        isRequired: true,
+      },    
     ],
     theme: "Разработка нового программного продукта",
   }

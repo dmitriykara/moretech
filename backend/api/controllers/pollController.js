@@ -5,11 +5,20 @@ const Poll = mongoose.model('Poll');
 //const Answer = mongoose.model('Answer');
 
 exports.getPolls = (req, res) => {
-  Poll.find({ partitipants : req.query.login }, (err, polls) => {
-    if (err) res.send(err);
+  Poll.find(
+    { 
+      participants : 
+      {
+        login: req.query.login,
+        isRequired: true 
+      }
+    },
+      (err, polls) => {
+        if (err) res.send(err);
 
-    res.json(polls);
-  });
+        res.json(polls);
+      }
+  );
 }
 
 exports.addPoll = (req, res) => {
