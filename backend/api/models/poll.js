@@ -12,7 +12,7 @@ const PollSchema = new mongoose.Schema({
   ],
   createdAt: { type: Date, default: Date.now },
   description: String,
-  header: String,
+  title: String,
   partitipants: [String],
 });
 

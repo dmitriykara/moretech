@@ -1,0 +1,103 @@
+pollapp: "v1.0"
+paths:
+  /users:
+    get:
+      action: get all users
+      args: None
+      response:
+        users: 
+          type: Array
+            typeOf: User
+  /polls:
+    get:
+      action: get Polls for the user
+      args:
+        login:
+          type: String
+          content: User's login
+      response:
+        poll:
+          type: Poll
+    post:
+      action: create Poll
+      args:
+        poll:
+          type: Poll
+      response:
+        poll:
+          type: Poll
+    put:
+      action: update Poll
+      args:
+        poll:
+          type: Poll
+      response:
+        poll:
+          type: Poll
+  /answers:
+    post:
+      action: add Answer
+      args:
+        pollId:
+          type: ObjectId
+        answer:
+          type: Answer
+      response:
+        poll:
+          type: Answer
+    put:
+      action: update Answer
+      args:
+        pollId:
+          type: ObjectId
+        answerId:
+          type: ObjectId
+        answer:
+          type: Answer
+      response:
+        answer:
+          type: Answer
+types:
+  Answer:
+    type: object
+    fields:
+      _id:
+        type: ObjectId
+      isFinal:
+        type: Boolean
+      result: 
+        type: Boolean
+      text: 
+        type: String
+      user: 
+        type: String
+      createdAt:
+        type: DateTime
+  Poll:
+    type: object
+    fields:
+      _id:
+        type: ObjectId
+      answers:
+        type: list
+        content: Answer
+      description: 
+        type: String
+      partitipants: 
+        type: Array
+        content: String
+      title: 
+        type: String
+      createdAt:
+        type: DateTime
+  User:
+    type: object
+    fields:
+      _id:
+        type: ObjectId
+      epartment:
+        type: String
+      login:
+        type: String
+      name: 
+        type: String
