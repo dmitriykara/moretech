@@ -71,11 +71,10 @@ types:
         type: String
       createdAt:
         type: DateTime
-        default: DateTime.Now
   Poll:
     type: object
     fields:
-      _id:
+      id:
         type: ObjectId
       answers:
         type: list
@@ -92,7 +91,6 @@ types:
         type: String
       createdAt:
         type: DateTime
-        default: DateTime.Now
       result:
         type: Boolean
       completedDate:
@@ -106,9 +104,9 @@ types:
   User:
     type: object
     fields:
-      _id:
+      id:
         type: ObjectId
-      epartment:
+      department:
         type: String
       login:
         type: String
