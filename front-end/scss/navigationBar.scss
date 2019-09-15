@@ -1,0 +1,338 @@
+$mainColor: rgba(13, 45, 144, .85);
+$mainColorAlpha: rgba(13, 45, 144, .6);
+$profileColor: #fff;
+$mainTitleColor: #182852;
+
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.logo {
+  display: inline-block;
+  position: relative;
+  float: left;
+}
+
+%default-circle {
+  outline: none;
+  border-radius: 50%;
+  border: none;
+  background-color: #fff;
+  height: 50px;
+  width: 50px;
+}
+
+#options {
+  height: 70px;
+}
+
+.nav-bar {
+  background-color: $mainColor;
+  position: relative;
+  z-index: 6;
+
+  @extend %default-circle;
+  width: 300px;
+  height: 300px;
+  margin-top: -150px;
+  margin-right: -150px;
+  float: right;
+
+  transition: 0.5s linear;
+
+  .mini-circles {
+    display: list-item;
+    list-style: none;
+    top: 50%;
+    left: 16%;
+
+    position: absolute;
+
+
+    .option {
+      .option1 {
+        @extend %default-circle;
+        position: absolute;
+        transition: .5s linear;
+      }
+
+      .option2 {
+        @extend %default-circle;
+        //transform:         translate3d(0,0px,0);
+        position: absolute;
+        transition: .5s linear;
+
+      }
+
+      .option3 {
+        @extend %default-circle;
+        position: absolute;
+        //transform:         translate3d(0px,0px,0);
+        transition: .5s linear;
+
+      }
+
+      .option4 {
+        position: absolute;
+        @extend %default-circle;
+        //transform:         translate3d(0px,0px,0);
+        transition: .5s linear;
+
+      }
+
+    }
+  }
+
+  &:hover {
+    width: 500px;
+    height: 500px;
+    margin-top: -250px;
+    margin-right: -250px;
+    cursor: pointer;
+    background-color: $mainColorAlpha;
+    z-index: 6;
+
+
+    .circle-profile-button {
+      top: 56%;
+      left: 26%;
+      cursor: pointer;
+    }
+
+    .option1 {
+      @extend %default-circle;
+      display: block;
+      transform:         translate3d(-70px,-10px,0);
+    }
+
+    .option2 {
+      @extend %default-circle;
+      display: block;
+      transform:         translate3d(-70px,65px,0);
+    }
+
+    .option3 {
+      @extend %default-circle;
+      display: block;
+      transform:         translate3d(-20px,120px,0);
+    }
+
+    .option4 {
+      @extend %default-circle;
+      display: block;
+      transform:         translate3d(50px,155px,0);
+      cursor: pointer;
+    }
+
+  }
+
+  .circle-profile-button {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    transition: .5s linear;
+    background-color: $mainColor;
+    @extend %default-circle;
+
+    top: 50%;
+    left: 16%;
+
+    img {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 0%;
+      border-radius: 50%;
+      //border: $mainColor 1px solid;
+    }
+
+  }
+}
+
+.svg-middle {
+  vertical-align: middle;
+}
+
+.current-polls {
+  display: inline-block;
+  width: 60%;
+  height: 60px;
+  //margin: 0;
+  position: relative;
+  top: 15%;
+  left: 10%;
+  margin-top: 20px;
+
+  #main-title {
+    font: {
+      family: "Roboto";
+      size: 50px;
+      weight: 300;
+    };
+    border-radius: 2px;
+    background-color: #fff;
+    color: $mainTitleColor;
+  }
+}
+
+.alternative-poll-window {
+  z-index: -2;
+  padding: 10px;
+  position: absolute;
+  width: 976px;
+  height: 628px;
+  top: 50%;
+  background-color: #fff;
+  left: 50%;
+  display: none;
+  margin-top: -314px;
+  margin-left: -488px;
+  border-radius: 12px;
+
+  .poll-window__body {
+    width: 100%;
+    height: 508px;
+    margin: 0;
+    position: absolute;
+    top: 17%;
+    left: 12%;
+
+    .body__main-theme {
+      width: 80%;
+      height: auto;
+
+      .main-theme__input {
+        outline: none;
+        border: none;
+        width: 99%;
+        padding: 10px;
+        white-space: normal;
+        font: {
+          family: "Roboto";
+          size: 40px;
+          weight: 200;
+        };
+        color: #4b4b4b;
+      }
+    }
+
+
+    .body__description {
+
+      textarea {
+        outline: none;
+        border: none;
+        width: 80%;
+        height: 70px;
+        border-radius: 12px;
+        background-color: #F7F7F7;
+        margin-left: 30px;
+        //color: #858DA5;
+        color: #8e8e8e;
+        padding: 10px;
+        font: {
+          family: "Open Sans", "Roboto";
+          size: 19px;
+          weight: 200;
+        };
+      }
+    }
+
+    .body__ul {
+      margin-top: 70px;
+      .options {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: list-item;
+        flex-flow: column;
+
+        width: 90%;
+        height: auto;
+
+        li {
+          display: inline-block;
+          margin-right: 90px;
+        }
+
+        .options__button {
+          outline: none;
+          border: none;
+          background-color: transparent;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+    .poll-window__continue-area {
+      .add-poll-button {
+        @extend %default-circle;
+
+        height: 40px;
+        width: 40px;
+        background-color: #E0E4ED;
+        position: absolute;
+        top: 90%;
+        left: 94%;
+
+        transition: 1s linear;
+
+        .arrow {
+          transition: .4s ease-in;
+        }
+
+        .tooltip {
+          visibility: hidden;
+          width: 120px;
+          background-color: rgba(0, 0, 0, .6);
+          color: #fff;
+          text-align: center;
+          border-radius: 6px;
+          padding: 5px 0;
+          position: absolute;
+          z-index: 1;
+          bottom: 150%;
+          height: 22px;
+          font-size: 17px;
+          left: 50%;
+          margin-left: -60px;
+        }
+
+        .tooltip::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: rgba(0, 0, 0, .6) transparent transparent transparent;
+        }
+
+        &:hover {
+          cursor: pointer;
+          background-color: rgb(233,233,233, .7);
+
+          .arrow {
+            transform: translate3d(10px, 0px, 0);
+            cursor: pointer;
+          }
+
+          .tooltip {
+            visibility: visible;
+          }
+        }
+      }
+    }
+
+}
+
+

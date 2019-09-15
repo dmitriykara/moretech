@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Poll</title>
+
+    <!--    vtb favicon-->
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAC9gmEAqF0yAJM4AwC4flsA8N3SAJxIGACdSBgAl0ANAP//+QDUrZcAlj4KAJlEEgDw39QAkDIAAP///wCRMgAAm0YUAPvu6wDlyLcAplgsALRzTQDlyrkA1ayXAJQ7BwCfTyIAnEcXAPPi2QCfTR8AnUscANWslgCUOwYA6dTMANy4pgCkVywA0aGKAP/49gDDkG8A6NHEAOfQvwDt2MoAs29MAKBRIwDz4t4A6dPGAKJVKAD/+/wA7NbNAL+DZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4qGA0NDQ0NDw0NDQ0ZDg4fCiAODg4ODg4ODg4oJA4aBRUODg4ODg4ODg4rFxEOAS4ODg4ODg4ODg4IGxYOHS8ODg4ODg4ODg4OFAMODhMnLQYNDw8NDQ0NDQAODg4hJQ4ODg4ODg4ODg4ODg4OCQIeDw0NDQ0NDQ0NDQ0ODg4sIg4ODg4ODg4ODg4ODg4OBAILDQ0NDQ0NDQ0PDwcjDg4mKRIODg4ODg4ODg4ODg4ODgwcDQ0NDw0NDw0PDRAODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=" rel="icon" type="image/x-icon" />
+
+    <link rel="stylesheet" href="scss/navigationBar.css">
+    <link rel="stylesheet" href="scss/pollPageStyle.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<section>
+    <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="92px" height="33px" viewBox="0 0 92 33" version="1.1">
+            <!— Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch —>
+            <title>Group 6</title>
+            <desc>Created with Sketch.</desc>
+            <defs>
+                <polygon id="path-1" points="32.5097041 32.7427747 91.8248457 32.7427747 91.8248457 6.50603633 32.5097041 6.50603633"/>
+            </defs>
+            <g id="vtb_ru" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Group-6">
+                    <g id="Group-Copy">
+                        <g id="Group-2">
+                            <path d="M6.25065367,0 L4.68701481,4.28311036 L26.3555573,4.28311036 L27.9191962,0 L6.25065367,0 Z M3.90470765,6.423693 L2.34106879,10.7058308 L24.0096113,10.7058308 L25.5732502,6.423693 L3.90470765,6.423693 Z M1.56363886,12.847386 L0,17.1295238 L21.6685425,17.1295238 L23.231206,12.847386 L1.56363886,12.847386 Z" id="Fill-1" fill="#009FDF"/>
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"/>
+                            </mask>
+                            <g id="Clip-3"/>
+                            <path d="M46.0659305,18.7617116 L46.0659305,18.8520825 C47.0561913,19.215552 48.002112,19.8511271 48.497735,20.2592855 C50.0289442,21.5304356 50.7048834,23.2097442 50.7048834,25.3885751 C50.7048834,28.975602 48.8130419,31.5625912 45.7052982,32.3799011 C44.7593775,32.6520067 43.7691167,32.7433706 41.9216153,32.7433706 L32.5097041,32.7433706 L32.5097041,6.50603633 L40.8416891,6.50603633 C42.5532145,6.50603633 43.7237914,6.59640716 44.7593775,6.86851275 C47.7774558,7.68582259 49.7589627,9.77428262 49.7589627,13.0872178 C49.7589627,14.8578903 49.1283488,16.3564572 48.0927627,17.3545087 C47.642465,17.808349 47.0118512,18.3535533 46.0659305,18.7617116 Z M37.7339454,21.5304356 L37.7339454,28.4303977 L41.3373122,28.4303977 C42.4172384,28.4303977 43.4084845,28.3400269 44.129749,27.6587698 C44.8500282,26.9775128 45.1653351,26.1155141 45.1653351,24.9804167 C45.1653351,24.118418 44.9396936,23.3011081 44.489396,22.711215 C43.7237914,21.7578524 42.7778706,21.5304356 41.1569961,21.5304356 L37.7339454,21.5304356 Z M37.6886201,16.9910392 L40.6160476,16.9910392 C41.516643,16.9910392 41.9669407,16.9910392 42.4172384,16.8549864 C43.634126,16.4915169 44.3997305,15.4030945 44.3997305,13.9045276 C44.3997305,12.1348482 43.5888006,11.3622273 42.4172384,10.9997508 C41.9216153,10.863698 41.4269776,10.8180161 40.4357315,10.8180161 L37.6886201,10.8180161 L37.6886201,16.9910392 Z M58.5412454,32.7433706 L58.5412454,10.9083869 L51.0201903,10.9083869 L51.0201903,6.50603633 L71.918141,6.50603633 L70.4322572,10.9083869 L63.7654868,10.9083869 L63.7654868,32.7433706 L58.5412454,32.7433706 Z M73.5390156,32.7433706 L73.5390156,6.50603633 L90.4739526,6.50603633 L88.9880688,10.9083869 L78.7189169,10.9083869 L78.7189169,16.7189336 L82.9075721,16.7189336 C86.2852974,16.7189336 88.0421481,17.5362434 89.2580504,18.5799769 C90.2039711,19.3972867 91.8248457,21.2126481 91.8248457,24.799675 C91.8248457,28.3400269 90.1586457,30.291441 88.7624273,31.2904856 C87.1415527,32.4245899 85.4300274,32.7433706 81.9616514,32.7433706 L73.5390156,32.7433706 Z M78.7189169,28.3400269 L82.6375906,28.3400269 C84.1234744,28.3400269 85.0240698,27.9765574 85.6546836,27.1592475 C85.9699905,26.7510892 86.4202882,26.0241502 86.4202882,24.6626291 C86.4202882,23.3011081 85.9699905,22.3477455 85.0693951,21.6664884 C84.5294321,21.2583301 83.8081675,21.0319064 82.5922652,21.0319064 L78.7189169,21.0319064 L78.7189169,28.3400269 Z" id="Fill-2" fill="#0A2973" mask="url(#mask-2)"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </svg>
+    </div>
+
+    <div class="title">
+        <ins id="main-title">
+            Изменение планов развития
+        </ins>
+    </div>
+
+    <!--    circle navigation bar-->
+    <div class="nav-bar">
+        <ul class="mini-circles" id="options">
+            <li class="option">
+                <button class="option1" type="button">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="svg-middle" width="30" height="30" viewBox="0 0 78 75" fill="#fff">
+<path d="M38.5245 3.55369C38.577 3.3921 38.6472 3.32759 38.699 3.29225C38.7668 3.24606 38.8713 3.2082 39 3.2082C39.1287 3.2082 39.2332 3.24606 39.301 3.29225C39.3528 3.32759 39.423 3.39211 39.4755 3.5537L46.501 25.1758C47.2373 27.4419 49.349 28.9762 51.7318 28.9762H74.4666C74.6365 28.9762 74.7196 29.023 74.7692 29.0614C74.8341 29.1116 74.9024 29.1993 74.9421 29.3217C74.9819 29.4441 74.9782 29.5552 74.9552 29.6339C74.9376 29.6942 74.898 29.7808 74.7605 29.8807L56.3676 43.2439C54.44 44.6444 53.6333 47.127 54.3697 49.3931L61.3951 71.0152C61.4476 71.1768 61.4287 71.2702 61.4076 71.3293C61.3799 71.4065 61.3176 71.4986 61.2135 71.5742C61.1093 71.6499 61.0025 71.6807 60.9206 71.6831C60.8578 71.685 60.7631 71.6741 60.6257 71.5742L42.2328 58.211C40.3051 56.8105 37.6949 56.8105 35.7672 58.211L17.3743 71.5742C17.2369 71.6741 17.1422 71.685 17.0794 71.6831C16.9975 71.6807 16.8907 71.6499 16.7865 71.5742C16.6824 71.4986 16.6201 71.4065 16.5924 71.3293C16.5713 71.2702 16.5524 71.1768 16.6049 71.0152L23.6304 49.3931C24.3667 47.127 23.56 44.6444 21.6324 43.2439L3.2395 29.8807C3.10204 29.7808 3.06238 29.6942 3.04479 29.6339C3.0218 29.5552 3.01809 29.4441 3.05786 29.3217C3.09763 29.1993 3.16593 29.1116 3.2308 29.0614C3.28045 29.023 3.36349 28.9762 3.53339 28.9762H26.2682C28.651 28.9762 30.7627 27.4419 31.499 25.1758L38.5245 3.55369Z" stroke="#525E80" stroke-width="5"/>
+</svg>
+                    </span>
+                </button>
+            </li>
+            <li class="option">
+                <button class="option2" type="button">
+                    <span>
+                    </span>
+                </button>
+            </li>
+            <li class="option">
+                <button class="option3" type="button">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="svg-middle" width="30" height="30" viewBox="0 0 84 94" fill="none">
+<path d="M57.5 19.2274C57.5 28.0477 50.1672 35.2955 41 35.2955C31.8328 35.2955 24.5 28.0477 24.5 19.2274C24.5 10.407 31.8328 3.15918 41 3.15918C50.1672 3.15918 57.5 10.407 57.5 19.2274Z" stroke="#525E80" stroke-width="5"/>
+<path d="M3.00001 72.3411C17 41.0002 38 43.5002 55 43.5002" stroke="#525E80" stroke-width="5" stroke-linecap="round"/>
+<path d="M54.1292 48.8673C56.0343 45.4383 60.9657 45.4383 62.8708 48.8673L76.4568 73.3218C78.3083 76.6544 75.8985 80.75 72.086 80.75H44.914C41.1016 80.75 38.6917 76.6544 40.5432 73.3218L54.1292 48.8673Z" fill="#525E80" fill-opacity="0.75"/>
+<path d="M60.4185 69.9761H57.5645L57.3423 52.1172H60.6577L60.4185 69.9761ZM57.2227 75.4106C57.2227 74.8979 57.3765 74.4707 57.6841 74.1289C58.0031 73.7757 58.4702 73.5991 59.0854 73.5991C59.7007 73.5991 60.1678 73.7757 60.4868 74.1289C60.8058 74.4707 60.9653 74.8979 60.9653 75.4106C60.9653 75.9233 60.8058 76.3506 60.4868 76.6924C60.1678 77.0228 59.7007 77.188 59.0854 77.188C58.4702 77.188 58.0031 77.0228 57.6841 76.6924C57.3765 76.3506 57.2227 75.9233 57.2227 75.4106Z" fill="#22315A"/>
+</svg>
+                    </span>
+                </button>
+            </li>
+            <li class="option">
+                <button class="option4" type="button" id="openPollSettingsButton">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="svg-middle" viewBox="0 0 62 62" fill="none">
+<rect y="29" width="62" height="5" rx="2.5" fill="#525E80"/>
+<rect x="29" y="62" width="62" height="5" rx="2.5" transform="rotate(-90 29 62)" fill="#525E80"/>
+</svg>
+<!--                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"-->
+<!--                             width="30" height="30"-->
+<!--                             class="svg-middle"-->
+<!--                             viewBox="0 0 172 172"-->
+<!--                             style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g id="original-icon" fill="#aeaeae"><path d="M85.83203,17.04323c-6.32845,0.09274 -11.38527,5.2949 -11.2987,11.62344v45.86667h-45.86667c-4.13529,-0.05848 -7.98173,2.11417 -10.06645,5.68601c-2.08471,3.57184 -2.08471,7.98948 0,11.56132c2.08471,3.57184 5.93115,5.74449 10.06645,5.68601h45.86667v45.86667c-0.05848,4.13529 2.11417,7.98173 5.68601,10.06645c3.57184,2.08471 7.98948,2.08471 11.56132,0c3.57184,-2.08471 5.74449,-5.93115 5.68601,-10.06645v-45.86667h45.86667c4.13529,0.05848 7.98173,-2.11417 10.06645,-5.68601c2.08471,-3.57184 2.08471,-7.98948 0,-11.56132c-2.08471,-3.57184 -5.93115,-5.74449 -10.06645,-5.68601h-45.86667v-45.86667c0.04237,-3.09747 -1.17017,-6.08033 -3.36168,-8.26973c-2.1915,-2.18939 -5.17553,-3.39907 -8.27296,-3.35371z"></path></g></g></svg>-->
+                    </span>
+                </button>
+            </li>
+        </ul>
+        <button class="circle-profile-button">
+            <img src="img/profileImage.png" alt="">
+        </button>
+    </div>
+</section>
+
+<section class="wrapper">
+    <div class="main-wrapper">
+        <div class="pins">
+            <div class="first-pin">
+                <div class="image">
+                    <img src="img/firstPin.png" alt="firstPin">
+                </div>
+                <span>Закрытие прочих направлений повлечет дестрой в проектах</span>
+            </div>
+            <div class="second-pin">
+                <div class="image">
+                    <img src="img/secondPin.png" alt="secondPin">
+                </div>
+                <span>Выбор приоритетных объектов позволит согласовать деятельность</span>
+            </div>
+        </div>
+
+
+        <div class="voice-container">
+            <div class="voice-container__ticks">
+                <div class="agree-disagree">
+                    <button class="agree-button">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             class="svg-middle" width="55" height="55" viewBox="0 0 113 128" fill="none">
+                            <g filter="url(#filter0_d)">
+                                <path d="M12 54.7C24.1382 78.0544 30.278 90.7644 40.481 113C58.9361 67.391 72.6772 44.392 102 7" stroke="#334576" stroke-opacity="0.65" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            <defs>
+                                <filter id="filter0_d" x="0.998535" y="-0.000244141" width="112.002" height="128" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                                    <feOffset dy="4"/>
+                                    <feGaussianBlur stdDeviation="2"/>
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                                </filter>
+                            </defs>
+                        </svg>
+                    </button>
+
+                    <button class="disagree-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" class="svg-middle" viewBox="0 0 112 112" fill="none">
+                            <g filter="url(#filter0_d)">
+                                <path d="M94.7829 13.8482L17.2171 89.6518" stroke="#334576" stroke-opacity="0.65" stroke-width="14" stroke-linecap="round"/>
+                            </g>
+                            <g filter="url(#filter1_d)">
+                                <path d="M93.9018 90.5329L18.0982 12.9672" stroke="#334576" stroke-opacity="0.65" stroke-width="14" stroke-linecap="round"/>
+                            </g>
+                            <defs>
+                                <filter id="filter0_d" x="5.66467" y="0.44751" width="100.671" height="110.605" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                                    <feOffset dy="4"/>
+                                    <feGaussianBlur stdDeviation="2"/>
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                                </filter>
+                                <filter id="filter1_d" x="0.697571" y="5.41479" width="110.605" height="100.671" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                                    <feOffset dy="4"/>
+                                    <feGaussianBlur stdDeviation="2"/>
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                                </filter>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+                <div class="deadline-end-poll"></div>
+            </div>
+            <div class="voice-container__comment">
+                <textarea name="description" id="" cols="30" rows="10" placeholder="Опишите тему"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="chat-wrapper">
+        <div class="chat"></div>
+    </div>
+</section>
+
+<script src="js/addPollScript.js"></script>
+<script src="js/currentPollScript.js"></script>
+
+</body>
+</html>
