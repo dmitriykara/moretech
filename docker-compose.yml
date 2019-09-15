@@ -6,7 +6,7 @@ services:
     restart: always
     environment:
       MONGO_INITDB_DATABASE: moretech
-      MONGO_INITDB_ROOT_USERNAME: moretech
-      MONGO_INITDB_ROOT_PASSWORD: moretech
+      #MONGO_INITDB_ROOT_USERNAME: moretech
+      #MONGO_INITDB_ROOT_PASSWORD: moretech
     ports:
       - 27017:27017

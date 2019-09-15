@@ -11,7 +11,7 @@ const User = require('./api/models/user');
 const api = require('./api/routes/routes');
 
 
-mongoose.connect('mongodb://localhost/moretech', {
+mongoose.connect('mongodb://127.0.0.1:27017/moretech', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
