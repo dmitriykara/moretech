@@ -5,7 +5,7 @@ const Poll = mongoose.model('Poll');
 //const Answer = mongoose.model('Answer');
 
 exports.getPolls = (req, res) => {
-  Poll.find({ partitipants: req.login }, (err, polls) => {
+  Poll.find({ partitipants: req.body.login }, (err, polls) => {
     if (err) res.send(err);
 
     res.json(polls);
@@ -13,7 +13,7 @@ exports.getPolls = (req, res) => {
 }
 
 exports.addPoll = (req, res) => {
-  Poll.create(req.poll, (err, _) => {
+  Poll.create(req.body.poll, (err, _) => {
     if (err) res.send(err);
 
     res.sendStatus(200);
@@ -21,7 +21,7 @@ exports.addPoll = (req, res) => {
 }
 
 exports.updatePoll = (req, res) => {
-  Poll.updateOne({ id: req.poll.id }, req.poll, (err, _) => {
+  Poll.updateOne({ id: req.body.poll.id }, req.body.poll, (err, _) => {
     if (err) res.send(err);
 
     res.sendStatus(200);
@@ -29,20 +29,20 @@ exports.updatePoll = (req, res) => {
 }
 
 exports.addAnswer = (req, res) => {
-  // Answer.create([req.answer], (err, answer) => {
-  //   if (err) req.send(err);
+  // Answer.create([req.body.answer], (err, answer) => {
+  //   if (err) req.body.send(err);
   //   Poll.update(
-  //     { id: req.answer.pollid },
-  //     { $addToSet: { answers: req.answer.id } },
+  //     { id: req.body.answer.pollid },
+  //     { $addToSet: { answers: req.body.answer.id } },
   //     (err, poll) => {
   //       if (err) res.send(err);
   //       res.sendStatus(200);
   //     });
   // });
-  Poll.findById(req.pollId, 'answers', (err, poll) => {
+  Poll.findById(req.body.pollId, 'answers', (err, poll) => {
     if (err) res.send(err);
 
-    poll.answers.create(req.answer, (err, _) => {
+    poll.answers.create(req.body.answer, (err, _) => {
       if (err) res.send(err);
 
       res.sendStatus(200);
@@ -51,17 +51,17 @@ exports.addAnswer = (req, res) => {
 }
 
 exports.updateAnswer = (req, res) => {
-  // Answer.update({ id: req.answer.id }, req.answer, (err, answer) => {
+  // Answer.update({ id: req.body.answer.id }, req.body.answer, (err, answer) => {
   //   if (err)
   //     res.send(err);
   //   res.sendStatus(200);
   // });
-  Poll.findById(req.pollId, 'answers', (err, poll) => {
+  Poll.findById(req.body.pollId, 'answers', (err, poll) => {
     if (err) res.send(err);
 
-    const answer = poll.answers.id(req.answer.id);
+    const answer = poll.answers.id(req.body.answer.id);
 
-    answer.update(req.answer, (err, _) => {
+    answer.update(req.body.answer, (err, _) => {
       if (err) res.send(err);
 
       res.sendStatus(200);
