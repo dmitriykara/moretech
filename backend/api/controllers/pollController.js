@@ -62,7 +62,7 @@ exports.updateAnswer = (req, res) => {
   Poll.findById(req.body.pollId, 'answers', (err, poll) => {
     if (err) res.send(err);
 
-    const answer = poll.answers.id(req.body.answer.id);
+    const answer = poll.findOne({answers : { $elemMatch : { user: req.answer.user }}});
 
     answer.update(req.body.answer, (err, _) => {
       if (err) res.send(err);

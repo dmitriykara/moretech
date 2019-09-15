@@ -134,7 +134,7 @@ db.polls.insertMany(
     ],
     title: "Разработка нового программного продукта",
     createAt: Date.now(),
-    deadline: new Date(3600 * 24 * 1000) + Date.now(),
+    deadline: new Date().setTime(3600 * 24 * 365 * 100),
     status: "open",
   }
 ])
