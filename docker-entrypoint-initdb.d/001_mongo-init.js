@@ -84,7 +84,7 @@ db.polls.insertMany(
         isRequired: true,
       }
     ],
-    theme: "Заказ пиццы",
+    title: "Заказ пиццы",
   },
   {
     answers: [
@@ -132,6 +132,9 @@ db.polls.insertMany(
         isRequired: true,
       },    
     ],
-    theme: "Разработка нового программного продукта",
+    title: "Разработка нового программного продукта",
+    createAt: Date.now(),
+    deadline: new Date(3600 * 24 * 1000) + Date.now(),
+    status: "open",
   }
 ])
