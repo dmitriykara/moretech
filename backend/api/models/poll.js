@@ -6,11 +6,11 @@ const PollSchema = new mongoose.Schema({
       isFinal: Boolean,
       result: Boolean,
       text: String,
-      user: mongoose.Schema.Types.ObjectId,
+      user: String,
     }
   ],
   description: String,
-  partitipants: [mongoose.Schema.Types.ObjectId],
+  partitipants: [String],
   theme: String,
 });
 
