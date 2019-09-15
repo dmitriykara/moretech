@@ -61,8 +61,6 @@ types:
   Answer:
     type: object
     fields:
-      _id:
-        type: ObjectId
       isFinal:
         type: Boolean
       result: 
@@ -73,6 +71,7 @@ types:
         type: String
       createdAt:
         type: DateTime
+        default: DateTime.Now
   Poll:
     type: object
     fields:
@@ -80,16 +79,30 @@ types:
         type: ObjectId
       answers:
         type: list
-        content: Answer
+        typeof: Answer
       description: 
         type: String
       partitipants: 
         type: Array
-        content: String
+        typeof: object
+          fields:
+            login: String
+            isRequired: Boolean
       title: 
         type: String
       createdAt:
         type: DateTime
+        default: DateTime.Now
+      result:
+        type: Boolean
+      completedDate:
+        type: DateTime
+      status:
+        type: string
+        enum:
+        -'completed'
+        -'open'
+        -'precompleted'
   User:
     type: object
     fields:

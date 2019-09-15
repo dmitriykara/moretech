@@ -68,3 +68,34 @@ exports.updateAnswer = (req, res) => {
     });
   });
 }
+
+exports.closePoll = (poll) => {
+  if (poll.answers.length > 0.5 * poll.users.length) {
+
+    counter_agree = 0;
+    counter_disagree = 0;
+
+    for (let i = 0; i < poll.answers.length; i++) {
+      if (poll.answers[i] == 1)
+        counter_agree += 1;
+      else
+        counter_disagree += 1;
+    }
+
+    if (counter_agree > 0.5 * poll.users.length) {
+      poll.status = "completed";
+      poll.result = 1;
+      Poll.updateOne({_id:poll._id}, poll, (err, _) => {
+        if (err) console.log(err);
+      });
+    }
+
+    if (counter_disagree > 0.5 * poll.users.length) {
+      poll.status = "completed";
+      poll.result = 0;
+      Poll.updateOne({_id:poll._id}, poll, (err, _) => {
+        if (err) console.log(err);
+      });
+    }
+  }
+}

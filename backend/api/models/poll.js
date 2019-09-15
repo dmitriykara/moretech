@@ -12,6 +12,7 @@ const PollSchema = new mongoose.Schema({
   ],
   createdAt: { type: Date, default: Date.now },
   deadline: Date,
+  completedDate: Date,
   description: String,
   partitipants: [
     {
@@ -20,6 +21,7 @@ const PollSchema = new mongoose.Schema({
     }
   ],
   status: { type: String, enum: ['completed', 'open', 'precompleted'] },
+  result: Boolean,
   title: String,
 });
 
