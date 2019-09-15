@@ -12,8 +12,8 @@ const PollSchema = new mongoose.Schema({
   ],
   createdAt: { type: Date, default: Date.now },
   description: String,
+  header: String,
   partitipants: [String],
-  theme: String,
 });
 
 module.exports = mongoose.model('Poll', PollSchema);
