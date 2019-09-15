@@ -2,7 +2,6 @@
 
 const mongoose = require('mongoose');
 const Poll = mongoose.model('Poll');
-//const Answer = mongoose.model('Answer');
 
 exports.getPolls = (req, res) => {
   Poll.find(
@@ -34,16 +33,6 @@ exports.updatePoll = (req, res) => {
 }
 
 exports.addAnswer = (req, res) => {
-  // Answer.create([req.body.answer], (err, answer) => {
-  //   if (err) req.body.send(err);
-  //   Poll.update(
-  //     { id: req.body.answer.pollid },
-  //     { $addToSet: { answers: req.body.answer.id } },
-  //     (err, poll) => {
-  //       if (err) res.send(err);
-  //       res.sendStatus(200);
-  //     });
-  // });
   Poll.findById(req.body.pollId, 'answers', (err, poll) => {
     if (err) res.send(err);
 
@@ -56,22 +45,15 @@ exports.addAnswer = (req, res) => {
 }
 
 exports.updateAnswer = (req, res) => {
-  // Answer.update({ id: req.body.answer.id }, req.body.answer, (err, answer) => {
-  //   if (err)
-  //     res.send(err);
-  //   res.sendStatus(200);
-  // });
-  Poll.findById(req.body.pollId, 'answers', (err, poll) => {
-    if (err) res.send(err);
-
-    const answer = poll.findOne({ answers: { $elemMatch: { user: req.answer.user } } });
-
-    answer.update(req.body.answer, (err, _) => {
+  Poll.update(
+    { _id: req.body.pollId, answers: { $elemMatch: { user: req.body.answer.user } } },
+    req.answer,
+    (err, poll) => {
       if (err) res.send(err);
 
       res.sendStatus(200);
-    });
-  });
+    }
+  );
 }
 
 exports.closePoll = (poll) => {
