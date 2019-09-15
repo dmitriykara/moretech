@@ -58,6 +58,7 @@ exports.updateAnswer = (req, res) => {
   // });
   Poll.findById(req.pollId, 'answers', (err, poll) => {
     if (err) res.send(err);
+
     const answer = poll.answers.id(req.answer.id);
 
     answer.update(req.answer, (err, _) => {
